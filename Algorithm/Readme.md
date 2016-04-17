@@ -5,3 +5,6 @@
 測試用mocha  
 目前完成內容  
 chapter1.Union-Find  
+chapter2.演算法簡介  
+chapter3.Stack & Queue  
+chapter4.基本排序
