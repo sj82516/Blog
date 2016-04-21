@@ -40,7 +40,6 @@ Sort2.prototype.merge = function(temp, low, high){
 	for(var k=0,i = low; i<=high; i++,k++){
 		this.list[i] = temp[k];
 	}
-	console.log(this.list);
 }
 
 Sort2.prototype.quickSort = function(){
@@ -50,11 +49,32 @@ Sort2.prototype.quickSort = function(){
 }
 
 Sort2.prototype.partition = function(low, high){
-
+	var i = low+1;
+	var j = high;
+	while(true){
+		if(this.list[low]>this.list[i]){
+			i++;
+		}
+		if(this.list[low]<this.list[j]){
+			j--;
+		}
+		if(i>=j){
+			break;
+		}
+		this.swap(this.list,i,j);
+	}
+	this.swap(this.list,j,low);
+	return j;
 }
 
 Sort2.prototype.qSort = function(low, high){
-
+	if(low>=high){
+		return;
+	}
+	var pivot = this.partition(low, high);
+	console.log(this.list);
+	this.qSort(low,pivot-1);
+	this.qSort(pivot+1,high);
 }
 
 
