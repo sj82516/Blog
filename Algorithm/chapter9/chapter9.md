@@ -1,7 +1,8 @@
 ### Chapter 9 Geometric Problem
 這一章在講圖形化問題，舉例來說 如何判斷一張圖中有幾條線彼此交叉重複(1D/2D intersection)或是說某一區間內包含了多少點(1D/2D intervals)，這都是圖形問題常遇到的基本核心問題，主要透過ST(implement by BST)來解決。  
 
-這張是課程節錄圖：  
+這張是課程節錄圖：
+![](https://github.com/sj82516/Blog/blob/master/Algorithm/chapter9/a9.jpg)
   
 1.1D range search:找出陣列中符合該區間的集合，使用BST實作，接著就iterator整棵樹找出答案，蠻直白的做法。  
 2.orthogonal line segment intersection:找出哪裡發生雙線重疊，使用sweep-line algorithm，從y軸掃過去，建立水平線的ST，如果遇到垂直線則降為1D range search判斷是否重疊。  
