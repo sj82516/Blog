@@ -22,5 +22,13 @@ describe('Symbol Table use Binary Tree', function(){
 		st.delete(st.root,'B');
 		st.iterator(st.arr,st.root);
 		expect(st.arr).to.eql(['A','C','G','J','K']);
+		st.insert('R',7);
+		st.insert('S',10);
+		st.insert('Q',9);
+		st.insert('L',5);
+		st.insert('B',7);
+		st.insert('I',10);
+		console.log(st.contain('E','M'));
+		expect(st.arr.length).to.eql(5);
 	});
 })

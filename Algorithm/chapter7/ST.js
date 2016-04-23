@@ -155,6 +155,11 @@ BST.prototype = {
 				}
 			}
 		}
+	},
+	contain: function(k1,k2){
+		var arr = [];
+		pContain(this.root,arr,k1,k2);
+		return arr;
 	}
 }
 
@@ -165,5 +170,23 @@ function pIterator(arr,node){
 	pIterator(arr,node.left);
 	arr.push(node.key);
 	pIterator(arr,node.right);
+}
+
+function pContain(node,arr,k1,k2){
+	if(node===null){
+		return;
+	}
+	if(node.key>k2){
+		pContain(node.left,arr,k1,k2);
+		return;
+	}else if(node.key<k1){
+		pContain(node.right,arr,k1,k2);
+		return
+	}else if(node.key<=k2 && node.key>=k1){
+		arr.push(node.key);
+		pContain(node.left,arr,k1,k2);
+		pContain(node.right,arr,k1,k2);
+	}
+	return;
 }
 module.exports = BST;
