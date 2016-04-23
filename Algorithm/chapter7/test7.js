@@ -7,14 +7,20 @@ describe('Symbol Table use Binary Tree', function(){
 		var st = new ST();
 		st.insert('C',5);
 		st.insert('A',3);
-		st.insert('D',7);
+		st.insert('J',7);
 		st.insert('K',10);
 		st.insert('B',9);
 		st.insert('G',5);
-		expect(st.max()).equal(10);
-		expect(st.min()).equal(3);
+		expect(st.max(st.root).value).equal(10);
+		expect(st.min(st.root).value).equal(3);
 		//inorder
-		st.iterator(st.root);
-		expect(st.arr).to.eql(['A','B','C','D','G','K']);
+		st.iterator(st.arr,st.root);
+		expect(st.arr).to.eql(['A','B','C','G','J','K']);
+		expect(st.ceiling('M')).equal('K');
+		expect(st.floor('M')).equal(null);
+		expect(st.floor('E')).equal('G');
+		st.delete(st.root,'B');
+		st.iterator(st.arr,st.root);
+		expect(st.arr).to.eql(['A','C','G','J','K']);
 	});
 })

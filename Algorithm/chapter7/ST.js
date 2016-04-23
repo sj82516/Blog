@@ -3,7 +3,7 @@ var Node = function(key,value){
 	this.value = value;
 	this.left = null;
 	this.right = null;
-	this.count = 0;
+	this.count = 1;
 }
 
 var BST = function(){
@@ -24,6 +24,7 @@ BST.prototype = {
 				point.value = v;
 				return
 			}else if(point.key > k){
+				point.count++;
 				if(point.left===null){
 					point.left = newNode;
 					return;
@@ -31,6 +32,7 @@ BST.prototype = {
 					point = point.left;
 				}
 			}else{
+				point.count++;
 				if(point.right===null){
 					point.right = newNode;
 					return;
@@ -40,38 +42,128 @@ BST.prototype = {
 			}
 		}
 	},
-	delete: function(k){
-
-	},
-	max: function(){
+	find: function(k){
 		var point = this.root;
+		while(true){
+			if(point.key === k){
+				return point;
+			}else if(point.key > k){
+				if(point.left){
+					point = point.left;
+				}else{
+					return null;
+				}
+			}else{
+				if(point.right){
+					point = point.right;
+				}else{
+					return null;
+				}
+			}
+		}
+	},
+	delete: function(point,k){
+		if(point===null){
+			return null;
+		}
+		if(point.key>k){
+			point.left = this.delete(point.left,k);
+		}
+		if(point.key<k){
+			point.right = this.delete(point.right,k);
+		}
+		if(point.key===k){
+			if(point.left===null){
+				return point.right;
+			}
+			if(point.right===null){
+				return point.left;
+			}
+
+			var temp = point;
+			point = this.min(point.right);
+			point.right = this.deleteMin(temp.right);
+			point.left = temp.left;
+		}
+		point.count--;
+		return point;
+	},
+	deleteMin: function(point){
+		if(point.left===null){
+			return point.right;
+		}
+		point.left = this.deleteMin(point.left);
+		return point;
+	},
+	max: function(point){
 		while(point.right!==null){
 			point = point.right;
 		}
-		return point.value;
+		return point;
 	},
-	min: function(){
-		var point = this.root;
+	min: function(point){
 		while(point.left!==null){
 			point = point.left;
 		}
-		return point.value;
+		return point;
 
 	},
 	iterator: function(node){
-		if(node===null){
-			return;
+		this.arr = [];
+		pIterator(this.arr,this.root);
+	},
+	ceiling: function(k){
+		var temp = null;
+		var point = this.root;
+		while(true){
+			if(point.key===k){
+				return k;
+			}else if(point.key>k){
+				if(point.left){
+					point = point.left;
+				}else{
+					return temp;
+				}
+			}else{
+				temp = (point.key-k)>(temp-k)? temp:point.key;
+				if(point.right){
+					point = point.right;
+				}else{
+					return temp;
+				}
+			}
 		}
-		this.iterator(node.left);
-		this.arr.push(node.key);
-		this.iterator(node.right);
 	},
-	floor: function(){
-
-	},
-	ceiling: function(){
-
+	floor: function(k){
+		var temp = null;
+		var point = this.root;
+		while(true){
+			if(point.key===k){
+				return k;
+			}else if(point.key>k){
+				temp = (point.key-k)>(temp-k)? temp:point.key;
+				if(point.left){
+					point = point.left;
+				}else{
+					return temp;
+				}
+			}else{
+				if(point.right){
+					point = point.right;
+				}else{
+					return temp;
+				}
+			}
+		}
 	}
 }
 
+function pIterator(arr,node){
+	if(node===null){
+		return;
+	}
+	pIterator(arr,node.left);
+	arr.push(node.key);
+	pIterator(arr,node.right);
+}
 module.exports = BST;
