@@ -21,7 +21,8 @@ child's value should be less than parent's
 4.將root移掉後，最後一位補上，此時需要重新排序，實作sink()，parent如果小於child則與較大的child對換。  
 
 heapsort實作：  
-透過binary heap可以建構簡單快速的heap sort，用同樣的方式儲存資料，接著逐步移除最大值(移到陣列後方)->sink()...，就可以完成sorting
+透過binary heap可以建構簡單快速的heap sort，用同樣的方式儲存資料，接著逐步移除最大值(移到陣列後方)->sink()...，就可以完成sorting  
+[參考LC215](https://github.com/sj82516/Blog/blob/master/LeetCode/LC215.md)
 
 進階應用：  
 Module dynamics simulation:現在CS大量運用於科學計算中，尤其是資料視覺化模擬部分，最基本的像是模擬粒子運動狀況，基本的碰撞等等，因此如果模擬的粒子量一多，運算的量就會變得十分巨量，基本有兩個做法：  
