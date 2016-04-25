@@ -1,4 +1,4 @@
-### Chapter 9 Geometric Problem
+###Geometric Problem
 這一章在講圖形化問題，舉例來說 如何判斷一張圖中有幾條線彼此交叉重複(1D/2D intersection)或是說某一區間內包含了多少點(1D/2D intervals)，這都是圖形問題常遇到的基本核心問題，主要透過ST(implement by BST)來解決。  
 
 這張是課程節錄圖：

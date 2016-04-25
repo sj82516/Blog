@@ -1,4 +1,4 @@
-### Chapter 8 Binary Search Tree
+### Binary Search Tree
 這章主要講基本的BST以及後續改進的版本，基本的BST可以透過linked list實作，這部分蠻基本的就蠻有多做筆記。  
 值得注意的是 刪除功能的實現：  
 簡單的方法是將該點的值設為null，但如果要以node層面移除的話需要用Hibbard deletion  

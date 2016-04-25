@@ -1,4 +1,4 @@
-### Charpter3 Stack and Queue  
+### Stack and Queue  
 這一章主要在講如何透過最基本得linked list和array實作stack(FILO)和queue(FIFO)  
 還有一些使用Java原生Libary的注意事項(實作iterator / 在不了解原理前不要濫用原生API etc.)  
 主要也是基本觀念。  

@@ -1,4 +1,4 @@
-###Chapter1 Union-Find  
+### Union-Find  
 主要解決點與點之間的連結問題  
 本章中介紹了三種解決方式  
 1.QuickFind  

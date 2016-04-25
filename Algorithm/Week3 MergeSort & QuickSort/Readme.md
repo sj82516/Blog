@@ -1,4 +1,4 @@
-###Chapter5 - MergeSort & QuickSort  
+###MergeSort & QuickSort  
 #### 一. MergeSort
 步驟：將陣列切半，不斷地切，直到剩一個元素後開始合併。  
 時間複雜度證明：  

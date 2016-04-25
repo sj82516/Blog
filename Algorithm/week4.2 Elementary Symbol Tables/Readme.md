@@ -1,4 +1,4 @@
-### Chapter 7 Symbol Table
+### Symbol Table
 目的：解決Key-Value問題，常見於網路 DNS Table、File System等等，相當重要的資料結構。  
 
 API:  

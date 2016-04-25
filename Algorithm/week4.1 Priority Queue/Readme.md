@@ -1,4 +1,4 @@
-### Chapter 6 Priority Queue
+### Priority Queue
 目的：快速找到最大值與最小值，應用場景例如 transaction problem，找出所有資料中的最大值但是資料又太多無法全部保存在記憶體中。  
 API:  
 1.insert(Key k)  
