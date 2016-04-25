@@ -23,7 +23,7 @@ Hash Table有幾個特點：
 BST:  
 1.表現較穩定  
 2.可以運作需要序列的操作   
-!()[]
+![](https://github.com/sj82516/Blog/blob/master/Algorithm/week6%20Hash%20Tables/hash.jpg)
 
 ##### 註一
 第一.為何選擇 [s[0]*31^(n-1) + s[1]*31^(n-2) + ... + s[n-1]](https://computinglife.wordpress.com/2008/11/20/why-do-hash-functions-use-prime-numbers/)：看完整篇他也沒給個明確的答案XD，只說根據實測31發生collision機率最低。  
