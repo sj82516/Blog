@@ -6,11 +6,12 @@
 2.刷LeetCode  
 
 二.語言的掌握  
-1.JS基本觀念：http://jstherightway.org/#getting-started  
-2.NodeJS：相關知識與練習(Express/Koa)+部落格實戰   
-3.網頁相關(HTML/CSS)   
-4.其他JS Library & Framework: Angular.js / React & FLUX / Meteor.js   
-5.資料視覺化(D3.js)與遊戲開發(still researching)    
+1. JS基本觀念：http://jstherightway.org/#getting-started / http://eloquentjavascript.net/      
+2. Coding Style:https://github.com/rwaldron/idiomatic.js/tree/master/translations/zh_TW  
+3. NodeJS：相關知識與練習(Express/Koa)+部落格實戰   
+4. 網頁相關(HTML/CSS)   
+5. 其他JS Library & Framework: Angular.js / React & FLUX / Meteor.js   
+6. 資料視覺化(D3.js)與遊戲開發(CreateJS-HTML5 Canvas)    
 
 三.系統層面學習  
 1.Linux與網路相關(Nginx)  
