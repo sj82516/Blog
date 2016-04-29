@@ -14,4 +14,4 @@ graph是個有趣卻也艱難的領域，其中又分directed和undirected graph
 1.reachability：從s出發可到的範圍，DFS使用實作。  
 2.topology sort:將DAG轉為依序的順位(保持前後相依性關係)，使用DFS實作，此Graph必須沒有迴圈。實際用於大學課程表(預先必修)等。    
 3.Strong Components：如果v可到w且w可到v，則兩者符合條件，此原理適用於等價關係。
-實作使用[Kosaraju-Sharir algorithm](https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm)，先跑過reverse topological sort再跑一次DFS將Strong Components分類。可實際用於觀察食物鏈、軟體模型彼此的相依性等。  
+實作使用[Kosaraju-Sharir algorithm](https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm)，原理很簡單，先將圖形連結反轉輸出topology sort，接著再將圖形連結反向，用剛剛得到的sort在跑一次DFS，如此一來如果兩個點有雙向連結就可以被歸成同一類。實際用於觀察食物鏈、軟體模型彼此的相依性等。  
