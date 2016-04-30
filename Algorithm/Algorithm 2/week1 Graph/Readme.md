@@ -13,5 +13,8 @@ graph是個有趣卻也艱難的領域，其中又分directed和undirected graph
 可用來表示有先後順序的流程圖，如combination circuit/implication gaph等  
 1.reachability：從s出發可到的範圍，DFS使用實作。  
 2.topology sort:將DAG轉為依序的順位(保持前後相依性關係)，使用DFS實作，此Graph必須沒有迴圈。實際用於大學課程表(預先必修)等。    
-3.Strong Components：如果v可到w且w可到v，則兩者符合條件，此原理適用於等價關係。
-實作使用[Kosaraju-Sharir algorithm](https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm)，原理很簡單，先將圖形連結反轉輸出topology sort，接著再將圖形連結反向，用剛剛得到的sort在跑一次DFS，如此一來如果兩個點有雙向連結就可以被歸成同一類。實際用於觀察食物鏈、軟體模型彼此的相依性等。  
+3.Strong Connected Components：如果v可到w且w可到v，則兩者符合條件，此原理適用於等價關係。
+實作使用  
+1.[Kosaraju-Sharir algorithm](https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm)，原理很簡單，先將圖形連結反轉輸出topology sort，接著再將圖形連結反向，用剛剛得到的sort在跑一次DFS，如此一來如果兩個點有雙向連結就可以被歸成同一類。  
+2.[Tarjan's strongly connected components algorithm](https://en.wikipedia.org/wiki/Tarjan%27s_strongly_connected_components_algorithm)，相對於Kosaraju Algorithm，Tarjan's只要跑一次DFS就好，原理是另外儲存一個low的陣列，先依照DFS序列逐一增加，輪詢到底發現低位節點有往回指到高位節點(比對low陣列中的值)，這時就形成了迴圈，也就是SCC的存在。
+實際用於觀察食物鏈、軟體模型彼此的相依性等。  
