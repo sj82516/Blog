@@ -16,5 +16,6 @@ graph是個有趣卻也艱難的領域，其中又分directed和undirected graph
 3.Strong Connected Components：如果v可到w且w可到v，則兩者符合條件，此原理適用於等價關係。
 實作使用  
 1.[Kosaraju-Sharir algorithm](https://en.wikipedia.org/wiki/Kosaraju%27s_algorithm)，原理很簡單，先將圖形連結反轉輸出topology sort，接著再將圖形連結反向，用剛剛得到的sort在跑一次DFS，如此一來如果兩個點有雙向連結就可以被歸成同一類。  
-2.[Tarjan's strongly connected components algorithm](https://en.wikipedia.org/wiki/Tarjan%27s_strongly_connected_components_algorithm)，相對於Kosaraju Algorithm，Tarjan's只要跑一次DFS就好，原理是另外儲存一個low的陣列，先依照DFS序列逐一增加，輪詢到底發現低位節點有往回指到高位節點(比對low陣列中的值)，這時就形成了迴圈，也就是SCC的存在。
+2.[Tarjan's strongly connected components algorithm](https://en.wikipedia.org/wiki/Tarjan%27s_strongly_connected_components_algorithm)，相對於Kosaraju Algorithm，Tarjan's只要跑一次DFS就好，原理是另外儲存一個low的陣列，先依照DFS序列逐一增加，輪詢到底發現低位節點有往回指到高位節點(比對low陣列中的值)，這時就形成了迴圈，也就是SCC的存在。  
+參考資料 : http://algs4.cs.princeton.edu/42digraph/TarjanSCC.java.html
 實際用於觀察食物鏈、軟體模型彼此的相依性等。  
