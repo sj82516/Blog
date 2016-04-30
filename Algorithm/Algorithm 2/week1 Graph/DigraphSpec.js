@@ -3,9 +3,10 @@ var Digraph = require('./Digraph.js').Digraph;
 var DirectedDFS = require('./Digraph.js').DirectedDFS;
 var DirectedBFS = require('./Digraph.js').DirectedBFS;
 var Topology = require('./Digraph.js').Topology;
+var SCC = require('./Digraph.js').SCC;
 
 //use eql() instead of equal()
-describe('Directed Graph Implement By DFS', function(){
+describe('Directed Graph', function(){
 	var diGraph = new Digraph(13); 
 	diGraph.addEdges(4,2);
 	diGraph.addEdges(2,3);
@@ -52,7 +53,10 @@ describe('Directed Graph Implement By DFS', function(){
 	diGraph2.addEdges(1,4);
 	it('Topology sort', function(){
 		var topology = new Topology(diGraph2);
-		console.log(topology.stack);
+		expect(topology.topologySort).to.eql([ 2, 5, 4, 1, 0, 6, 3 ]);
 	});
-
+	it('Strong Connected Component', function(){
+		var scc = new SCC(diGraph);
+		expect(scc.connected(0,5)).to.equal(true);
+	});
 })

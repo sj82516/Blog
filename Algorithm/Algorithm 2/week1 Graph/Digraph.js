@@ -146,7 +146,7 @@ DirectedBFS.prototype.multiSourceShortestPath = function(v){
 var Topology = function(graph){
 	this.graph = graph;
 	this.size = graph.size;
-	this.stack = [];
+	this.topologySort = [];
 	this.mark = [];
 	function init(){
 		for (var i = 0; i < this.graph.size; i++) {
@@ -170,12 +170,71 @@ Topology.prototype.dfs = function(v){
 			this.dfs(next);
 		}
 	}
+	this.topologySort.push(v);
+}
+
+var SCC = function(graph){
+	this.graph = graph;
+	this.mark = [];
+	this.low = [];
+	this.stack = [];
+	this.id = [];
+	this.count = 0;
+	this.preorder = 0;
+	function init(){
+		for (var i = 0; i < this.graph.size; i++) {
+			this.mark.push(false);
+			this.low.push(this.graph.size);
+			this.id.push(0);
+		};
+		for (var j = 0; j < this.graph.size; j++) {
+			if(!this.mark[j]){
+				this.tarjanDFS(j);
+			}
+		};
+	}
+	init.bind(this)();
+}
+
+SCC.prototype.tarjanDFS = function(v){
+	this.mark[v] = true;
+	this.low[v] = this.preorder++;
 	this.stack.push(v);
+	var min = this.low[v];
+	var next = 0;
+	for(var i = 0; i < this.graph.adj[v].length; i++){
+		next = this.graph.adj[v][i];
+		if(!this.mark[next]){
+			this.tarjanDFS(next);
+		}
+		//find the lowest position in all connected edges
+		if(min > this.low[next]){
+			min = this.low[next];
+		}
+	}
+	// this mean there is some edge connected to lower position. -> cycle exist!
+	if(min < this.low[v]){
+		this.low[v] = min;
+		return;
+	}
+	// min === this.low[v] -> cycle end
+	do{
+		next = this.stack.pop();
+		this.id[next] = this.count;
+		this.low[next] = this.graph.size;
+		console.log(this.id);
+	}while(next!==v)
+	this.count++;
+}
+
+SCC.prototype.connected = function(v,w){
+	return this.id[v] === this.id[w];
 }
 
 module.exports = {
 	Digraph : Digraph,
 	DirectedDFS : DirectedDFS,
 	DirectedBFS : DirectedBFS,
-	Topology : Topology
+	Topology : Topology,
+	SCC : SCC
 }
