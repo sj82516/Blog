@@ -59,4 +59,4 @@ describe('Directed Graph', function(){
 		var scc = new SCC(diGraph);
 		expect(scc.connected(0,5)).to.equal(true);
 	});
-})
+});

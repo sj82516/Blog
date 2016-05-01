@@ -33,8 +33,8 @@ var DirectedDFS = function(graph,s){
 		for (var i = 0; i < this.graph.size; i++) {
 			this.mark.push(false);
 			this.edgeTo.push(null);
-		};
-		this.dfs(s)
+		}
+		this.dfs(s);
 	}
 	init.bind(this)();
 }
