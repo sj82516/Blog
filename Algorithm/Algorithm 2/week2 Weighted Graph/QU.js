@@ -1,6 +1,5 @@
-var WQU = function(num){
+var QU = function(num){
 	this.id = [num];
-	this.size = [num];
 	this.len = num;
 	this.init();
 
@@ -14,25 +13,19 @@ var WQU = function(num){
 	return this;
 }
 
-WQU.prototype.init = function(){
+QU.prototype.init = function(){
 	for(var i=0; i<this.len; i++){
 		this.id[i] = i;
-		this.size==0;
 	}
 }
 
-WQU.prototype.union = function(p, q){
+QU.prototype.union = function(p, q){
 	var i = this.root(p);
 	var j = this.root(q);
 	this.id[i] = j;
-	if(this.size[p]>this.size[q]){
-		this.id[j] = i;
-	}else{
-		this.id[i] = j;
-	}
 }
 
-WQU.prototype.connected = function(p, q){
+QU.prototype.connected = function(p, q){
 	if(this.root(this.id[p])!==this.root(this.id[q])){
 		return false;
 	}else{
@@ -40,4 +33,4 @@ WQU.prototype.connected = function(p, q){
 	}
 }
 
-module.exports = WQU;
+module.exports = QU;

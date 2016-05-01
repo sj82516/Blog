@@ -13,7 +13,6 @@ var MinPQ = function(size){
 MinPQ.prototype = {
 	insert : function(v){
 		this.key[++this.length] = v;
-		console.log(this.length);
 		swim(this.key,this.length);
 	},
 	deleteMin : function(){

@@ -22,13 +22,10 @@ WQU.prototype.init = function(){
 }
 
 WQU.prototype.union = function(p, q){
-	var i = this.root(p);
-	var j = this.root(q);
-	this.id[i] = j;
 	if(this.size[p]>this.size[q]){
-		this.id[j] = i;
+		this.id[q] = p;
 	}else{
-		this.id[i] = j;
+		this.id[p] = q;
 	}
 }
 

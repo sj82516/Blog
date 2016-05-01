@@ -20,11 +20,16 @@ QU.prototype.init = function(){
 }
 
 QU.prototype.union = function(p, q){
-	this.id[p] = q;
+	var i = this.root(p);
+	var j = this.root(q);
+	this.id[i] = j;
 }
 
 QU.prototype.connected = function(p, q){
 	if(this.root(this.id[p])!==this.root(this.id[q])){
+		console.log(this.id);
+		console.log(p,q);
+		console.log(this.root(this.id[p]),this.root(this.id[q]));
 		return false;
 	}else{
 		return true;
