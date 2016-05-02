@@ -37,8 +37,8 @@ EdgeWeightGraph.prototype = {
 	addEdge : function(e){
 		var v = e.either();
 		var w = e.other(v);
-		this.adj[v].push(w);
-		this.adj[w].push(v);
+		this.adj[v].push(e);
+		this.adj[w].push(e);
 		this.edges.push(e);
 	},
 	adj : function(v){
@@ -62,7 +62,7 @@ var KruskalMST = function(graph){
 			w = s.other(v);
 			if(!this.qu.connected(v,w)){
 				this.qu.union(v,w);
-				this.mst.push(s);
+				this.mst.push([v,w]);
 				this.weightSum += s.weight;
 			}
 		}
@@ -70,10 +70,50 @@ var KruskalMST = function(graph){
 	init.bind(this)();
 }
 
+var PrimMST = function(graph){
+	this.graph = graph;
+	this.mark = [];
+	this.mst = [];
+	this.minPQ = new MinPQ(graph.size);
+	this.weightSum = 0;
+	function init(){
+		for(var i = 0; i<graph.size; i++){
+			this.mark.push(false);
+		}
+		var s,v,w;
+		visit(this.graph, this.mark, this.minPQ, 0);
+		while(this.minPQ.length>0 && this.mst.length<this.graph.size){
+			s = this.minPQ.deleteMin();
+			v = s.either();
+			w = s.other(v);
+			if(this.mark[v] && this.mark[w]){
+				continue;
+			}
+			this.mst.push([v,w]);
+			if(!this.mark[v]){
+				visit(this.graph, this.mark, this.minPQ, v);
+			}
+			if(!this.mark[w]){
+				visit(this.graph, this.mark, this.minPQ, w);
+			}
+		}
+	}
+	init.bind(this)();
+	function visit(graph, mark, minPQ, s){
+		mark[s] = true;
+		for(var i=0; i<graph.adj[s].length; i++){
+			if(!mark[graph.adj[s][i].other(s)]){
+				minPQ.insert(graph.adj[s][i]);
+			}
+		}
+	}
+}
+
 module.exports = {
 	Edge : Edge,
 	EdgeWeightGraph : EdgeWeightGraph,
-	KruskalMST : KruskalMST
+	KruskalMST : KruskalMST,
+	PrimMST : PrimMST
 }
 
 

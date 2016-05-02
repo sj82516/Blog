@@ -2,6 +2,7 @@ var expect = require('chai').expect;
 var Edge = require('./WGraph.js').Edge;
 var EdgeWeightGraph = require('./WGraph.js').EdgeWeightGraph;
 var KruskalMST = require('./WGraph.js').KruskalMST;
+var PrimMST = require('./WGraph.js').PrimMST;
 
 describe("Weighted Undirected Graph", function () {
 	var edgeWeightGraph = new EdgeWeightGraph(8);
@@ -23,6 +24,12 @@ describe("Weighted Undirected Graph", function () {
 	edgeWeightGraph.addEdge(new Edge(5,7,0.28));
 	it("KruskalMST",function(){
 		var kruskalMST = new KruskalMST(edgeWeightGraph);
-		//console.log(kruskalMST.mst);
+		console.log(kruskalMST.mst);
+		expect(kruskalMST.mst).to.eql([ [ 0, 7 ],[ 2, 3 ],[ 1, 7 ],[ 0, 2 ],[ 5, 7 ],[ 4, 5 ],[ 6, 2 ] ]);
+	});
+	it("PrimMST",function(){
+		var primMST = new PrimMST(edgeWeightGraph);
+		console.log(primMST.mst);
+		expect(kruskalMST.mst).to.eql([ [ [ 0, 7 ],[ 1, 7 ],[ 0, 2 ],[ 2, 3 ],[ 5, 7 ],[ 4, 5 ],[ 6, 2 ] ]]);
 	});
 })
