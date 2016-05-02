@@ -30,9 +30,10 @@ var EdgeWeightGraph = function(size){
 		for(var i = 0; i < size ; i++){
 			this.adj.push([]);
 		}
-	};
+	}
 	init.bind(this)();
 }
+
 EdgeWeightGraph.prototype = {
 	addEdge : function(e){
 		var v = e.either();
@@ -40,9 +41,6 @@ EdgeWeightGraph.prototype = {
 		this.adj[v].push(e);
 		this.adj[w].push(e);
 		this.edges.push(e);
-	},
-	adj : function(v){
-		return this.adj[v];
 	}
 }
 

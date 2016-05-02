@@ -30,6 +30,6 @@ describe("Weighted Undirected Graph", function () {
 	it("PrimMST",function(){
 		var primMST = new PrimMST(edgeWeightGraph);
 		console.log(primMST.mst);
-		expect(kruskalMST.mst).to.eql([ [ [ 0, 7 ],[ 1, 7 ],[ 0, 2 ],[ 2, 3 ],[ 5, 7 ],[ 4, 5 ],[ 6, 2 ] ]]);
+		expect(primMST.mst).to.eql([[ 0, 7 ],[ 1, 7 ],[ 0, 2 ],[ 2, 3 ],[ 5, 7 ],[ 4, 5 ],[ 6, 2 ]]);
 	});
 })
