@@ -56,5 +56,5 @@ var adder = {
 };
 
 console.log(adder.add(1)); //2
-console.log(adder.addThruCall(1)); //2
+console.log(adder.addThruCall(1)); //3 !
 console.log(adder.addThruCall2(1)); //2
