@@ -1,5 +1,6 @@
 "use strict";
 
+var events = require('events');
 //Exam 1
 //Check if Callback execute after stack clean.
 function exam1() {
@@ -37,6 +38,7 @@ function exam3() {
 	});
 }
 
+//enqueue I/O queue
 function exam4() {
 	setTimeout(function () {
 		console.log("setImmediate would occur after me");
@@ -53,10 +55,6 @@ function exam4() {
 			}
 		}
 	})();
-
-	setImmediate(function () {
-		console.log("I wait at the end of I/O queue");
-	});
 }
 
 function exam5() {
@@ -75,10 +73,33 @@ function exam5() {
 			}
 		}
 	})();
+}
 
-	process.nextTick(function () {
-		console.log("I would insert into front of I/O queue");
+// Event emitter is async!
+function exam6() {
+	var eventEmitter = new events.EventEmitter();
+	eventEmitter.on('step1', function () {
+		console.log("Hello World 1");
 	});
+	eventEmitter.on('step2', function () {
+		console.log("Hello World 2");
+	});
+	console.log("Event is sync so here is Hello World 3");
+	eventEmitter.emit("step1");
+	eventEmitter.emit("step2");
+}
+
+function exam7() {
+	var eventEmitter = new events.EventEmitter();
+	eventEmitter.on('step1', function () {
+		console.log("Hello World 1");
+	});
+	eventEmitter.on('step2', function () {
+		console.log("Hello World 2");
+	});
+	eventEmitter.emit("step1");
+	console.log("Event is sync so here is Hello World 3");
+	eventEmitter.emit("step2");
 }
 
 module.exports = {
@@ -86,6 +107,7 @@ module.exports = {
 	exam2: exam2,
 	exam3: exam3,
 	exam4: exam4,
-	exam5: exam5
-
+	exam5: exam5,
+	exam6: exam6,
+	exam7: exam7
 };
