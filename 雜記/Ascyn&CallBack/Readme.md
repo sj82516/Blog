@@ -17,20 +17,22 @@
 [Youtube 影片連結](https://www.youtube.com/watch?v=frn-h5Hz8i8&index=1&list=PLrhD_4zbYcPPAKv5EoWIDwSjsSoc_Otcr)  
 [Stack Overflow](http://stackoverflow.com/questions/22644328/when-is-the-thread-pool-used)  
 ![重點截圖](https://github.com/sj82516/Blog/blob/master/%E9%9B%9C%E8%A8%98/Ascyn%26CallBack/%08as3.jpg)   
-NodeJS App跑在Main Thread上，如果遇到Async Function(連同Callback)Push到Event Queue上，此時Event Loop(在這裡面都是Sync!) 會向 Worker Thread Pool所求Thread執行程式，完成後調用Callback，如果Callback還是Async則重新進入Event Queue中，反之返回Main Thread。   
+NodeJS App跑在Main Thread上，如果遇到Async Function(連同Callback)Push到Event Queue上，此時Event Loop(在這裡面都是Sync!) 會向 Worker Thread Pool索求Thread執行程式(Sync!)，完成後調用Callback，如果Callback還是Async則重新進入Event Queue中，反之返回Main Thread。   
 
-所以說NodeJS是Single Thread只能說過度簡化，它利用[libuv](https://github.com/libuv/libuv)(C library)實現multi-thread的控管，並將此封裝，所以使用者在編寫程式時完全不需要理解Event loop和Thread Pool，就可以寫出高效的Non-Blocking Code。   
+所以描述NodeJS是Single Thread只能說過度簡化，它利用[libuv](https://github.com/libuv/libuv)(C library)實現multi-thread的控管，並將此封裝，所以使用者在編寫程式時完全不需要理解Event loop和Thread Pool，就可以寫出高效的Non-Blocking Code。   
 
-我目前查到兩個方法    
-1.使用event emit[stack-overflow問題連結](http://stackoverflow.com/questions/17740988/write-async-function-with-eventemitter)  
-自己創建Event emitter，可以註冊事件插入Event Queue中，在特定情況下決定觸發，值得注意是Event.emit(function())中是Sync。  
-2.使用setImmediate和nextTick：  
+我目前查到兩個方法     
+1.使用setImmediate和nextTick：  
 其中setImmediate是將該function插入Event queue的最後，完成後依序調用；
 使用nextTick則會直接插在Event queue的最前方，所以整個Event queue會等nextTick的Callback結束才繼續，所以如果callback很耗CPU time，會有blocking I/O的疑慮；但是另一個好處是可以處理偽Async的問題，細節請參考此[文章](https://howtonode.org/understanding-process-next-tick)   
 官網 Note: the nextTick queue is completely drained on each pass of the event loop before additional I/O is processed. As a result, recursively setting nextTick callbacks will block any I/O from happening, just like a while(true); loop.   
 [CNode深度分析文](https://cnodejs.org/topic/4f16442ccae1f4aa2700109b)      
-3.使用C/C++ Addons 
+2.使用C/C++ Addons 
 詳細參考[官網](https://nodejs.org/api/addons.html)，可以直接調用libuv，這部分我就暫時不多研究了XD
+
+＊.錯誤：使用event emit[stack-overflow問題連結](http://stackoverflow.com/questions/17740988/write-async-function-with-eventemitter)  
+自己創建Event emitter，可以註冊事件插入Event Queue中，在特定情況下決定觸發，值得注意是Event.emit(function())中如果是一般函示會直接Return到Main Thread，所以就變成Sync!  
+官網Note:When the EventEmitter object emits an event, all of the Functions attached to that specific event are called synchronously. Any values returned by the called listeners are ignored and will be discarded. 
 
 ##### Callback  
 就我的理解是 將functionA以變數形式傳遞，讓接收functionA的functionB可以決定何時執行functionB，之所以取名為Callback回呼是因為常搭配Async function，當I/O "Callback"時該執行的動作(defined in functionB)  

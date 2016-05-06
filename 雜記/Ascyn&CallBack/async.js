@@ -75,31 +75,25 @@ function exam5() {
 	})();
 }
 
-// Event emitter is async!
+//Emit is sync
 function exam6() {
 	var eventEmitter = new events.EventEmitter();
 	eventEmitter.on('step1', function () {
 		console.log("Hello World 1");
 	});
 	eventEmitter.on('step2', function () {
-		console.log("Hello World 2");
-	});
-	console.log("Event is sync so here is Hello World 3");
-	eventEmitter.emit("step1");
-	eventEmitter.emit("step2");
-}
-
-function exam7() {
-	var eventEmitter = new events.EventEmitter();
-	eventEmitter.on('step1', function () {
-		console.log("Hello World 1");
-	});
-	eventEmitter.on('step2', function () {
+		(function IWanaBlockYou() {
+			for (var i = 0; i < 500000000; i++) {
+				if (i % 5000000 === 0) {
+					console.log("wait....");
+				}
+			}
+		})();
 		console.log("Hello World 2");
 	});
 	eventEmitter.emit("step1");
-	console.log("Event is sync so here is Hello World 3");
 	eventEmitter.emit("step2");
+	console.log("Event is sync so here is Hello World 3");
 }
 
 module.exports = {
