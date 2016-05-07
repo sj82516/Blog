@@ -31,7 +31,6 @@ var adder = {
 		var b = {
 			base : 2
 		};
-
 		return f.call(b,a);
 	},
 
@@ -40,7 +39,6 @@ var adder = {
 		var b = {
 			base : 2
 		};
-
 		return f.call(b,a);
 	}
 }
