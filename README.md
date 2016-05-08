@@ -11,7 +11,7 @@
 3. NodeJS：相關知識與練習(Express/Koa)+部落格實戰   
 4. 網頁相關(HTML/CSS)   
 5. 其他JS Library & Framework: Angular.js / React & FLUX / Meteor.js   
-6. 資料視覺化(D3.js)與遊戲開發(CreateJS-HTML5 Canvas)    
+6. 資料視覺化(D3.js)與遊戲開發(PhaserJS)    
 
 三.系統層面學習  
 1.Linux與網路相關(Nginx)  
