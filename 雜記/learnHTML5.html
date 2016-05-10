@@ -1,0 +1,186 @@
+<!-- Tutorial : http://www.w3schools.com/html/html_head.asp && https://www.youtube.com/watch?v=kDyJN7qQETA&list=PLrhD_4zbYcPNwtybj5D-iqPP7ZJkEEb8w&index=3 -->
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+	<head>
+		<!-- <meta> specify page description, keywords , author and other metadata.  -->
+		<!-- meta content: http://www.html-5.com/metatags/#robots-meta-tag -->
+		<meta name="keywords" content="HTML5, HTML, CSS">
+		<meta name="description" content="Learn HTML5">
+		<meta charset="UTF-8">
+		<meta name="author" content="YuanChieh">
+		<meta name="robots" content="index,follow">
+
+		<link rel="stylesheet" href=""/>
+		<!-- icon is 16*16 px -->
+		<link rel="icon" href="favicon.ico"/>
+
+		<title> YJ HTML5 </title>
+
+		<!-- JS for canvas -->
+		<script>
+			window.onload = function(){
+				var canvas = document.getElementById("canvas");
+				if(canvas.getContext){
+					var ctx = canvas.getContext("2d");
+					
+				}
+			};
+		</script>
+	</head>
+
+	<body>
+		<div>
+			div Use for decoration tag , not a structure tag
+		</div>
+
+		<noscript> 
+			noscript:When no JS support, show user 
+		</noscript>
+
+		<h1>
+			Haha
+		</h1>
+
+		<p>
+			Using for paragraph. If you wana new line , use br<br>
+			This is new line.
+		</p>
+
+		<blockquote cite="">
+			Blockquote use for quote..... So apparent.....
+			cite define where the quote came from.
+		</blockquote>
+
+		<q cite="">
+			q is similiar to blockquote. Different layout.
+		</q>
+
+		<pre>
+			pre will preserve all the space in the block.       Space!
+			New line also
+			You can also put code here
+			<code>
+				function(){
+					return "Hello World";
+				}
+			</code>
+		</pre>
+
+		<img id="" src="https://yuanchieh.files.wordpress.com/2015/08/p17.jpg" width="20%" height="20%" alt="Maker"><br>
+
+		<!-- Tag for emphasis string -->
+		<b>Bold</b> <br>
+		<strong>Strong</strong><br>
+		<em>Emphasis</em><br>
+		<i>italic</i><br>
+
+		<small>Small</small><br>
+		<ins>Insert</ins><br>
+		<del>Delete</del><br>
+		<samp>Sample Output</samp><br>
+
+		This is abbreviation <abbr title="show here">abbr</abbr><br>
+
+		<dfn title="the formal statement">Definition</dfn><br>
+
+		<!-- Object : use for load media data, including doc / media/ audio/ vedio... -->
+		<object data="http://eloquentjavascript.net/Eloquent_JavaScript.pdf" type="application/pdf" width="50%" height="400px"></object><br>
+
+		<!-- iframe could also load source form ouside,but you sould be aware of URL and server response. CHeck this http://stackoverflow.com/questions/27358966/how-to-set-x-frame-options-on-iframe -->
+		<iframe src="https://www.youtube.com/embed/kDyJN7qQETA" width="400px" height="400px"></iframe><br>
+
+		<a href="http://stackoverflow.com/questions/16660559/difference-between-iframe-embed-and-object-elements">What is different between iframe and Object!</a>
+		<header>
+		</header>
+
+		<nav>
+		</nav>
+
+		<main>
+			<h1> main is main structure of web page.</h1>
+
+
+			<section>
+				<article>
+					<p>Sayyyyyyyyy Something</p>
+					<aside>
+						Here is aside content!
+					</aside>
+				</article>
+			</section>
+
+			<ul>
+				<li>This</li>
+				<li>is</li>
+				<li>unorder</li>
+				<li>list</li>
+			</ul>
+
+			<ol>
+				<li>This</li>
+				<li>is</li>
+				<li>unorder</li>
+				<li>list</li>
+			</ol>
+
+			<table>
+				<caption> Table-name</caption>
+
+				<thead>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td colspan="2">11</td>
+						<td colspan="2">22</td>
+					</tr>
+					<tr>
+						<td colspan="3">33</td>
+						<td colspan="3">44</td>
+					</tr>
+				</tbody>
+
+				<tfoot>
+				</tfoot>
+
+			<form>
+				<input type="text" name="username" maxlength="50"/><br>
+				 <input type="password" name="password" maxlength="50"/><br>
+				 <textarea name="history" rows="20" cols="50"> Input some words</textarea>
+
+				 <fieldset>
+				 	<legend>fieldset caption</legend>
+				 	Programming<input type="checkbox" name="Programming" value="Programming"/>
+				 	Running<input type="checkbox" name="Running" value="Running"/>
+				</fieldset><br>
+
+				<select name="select">
+					<option value="s1">value 1</option>
+					<option value="s2">value 2</option>
+					<option value="s3">value 3</option>
+					<optgroup label="group">
+						<option value="s4">value 4</option>
+						<option value="s5">value 5</option>
+						<option value="s6">value 6</option>
+					</optgroup>
+				</select><br>
+
+				 <input type="submit" name="submit" value="submit"/><br>
+				 <input type="reset" value="reset"/><br>
+			</form>
+
+			<canvas id="canvas" width="800" height="400">
+			</canvas>
+
+
+		</main>
+
+		<footer>
+		</footer>
+
+
+	</body>
+
+</html>
