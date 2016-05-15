@@ -4,18 +4,31 @@
 	 viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#FFFFFF;}
+	<!-- black outline stroke -->
 	.st1{fill:none;stroke:#000000;stroke-miterlimit:10;stroke-dasharray:12.0464,12.0464;}
 	.st2{stroke:#FFFFFF;stroke-miterlimit:10;}
 	.st3{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
 
-
+	#test{
+		fill:red;
+		-webkit-transition: -webkit-transform 2s;
+		transition: transform 2s;
+		-webkit-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+	}
+	#test:hover{
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+		-webkit-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+	}
 </style>
 <g>
 	<circle class="st0" cx="100" cy="100" r="88.2"/>
 	<circle class="st1" cx="100" cy="100" r="88.2"/>
 </g>
 <circle class="st2" cx="100" cy="100" r="73.4"/>
-<ellipse class="st3" cx="65" cy="100" rx="5.8" ry="22.2"/>
+<ellipse id="test" class="st3" cx="65" cy="100" rx="5.8" ry="22.2"/>
 <ellipse class="st3" cx="100" cy="100" rx="5.8" ry="22.2"/>
 <ellipse class="st3" cx="135" cy="100" rx="5.8" ry="22.2"/>
 </svg>

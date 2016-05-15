@@ -12,9 +12,10 @@
 		<meta name="author" content="YuanChieh">
 		<meta name="robots" content="index,follow">
 
-		<link rel="stylesheet" href=""/>
-		<!-- icon is 16*16 px -->
+		<link rel="stylesheet" href="./style.css"/>
+		<!-- icon is 16*16 px 
 		<link rel="icon" href="favicon.ico"/>
+		-->
 
 		<title> YJ HTML5 </title>
 
@@ -89,7 +90,9 @@
 		<object data="http://eloquentjavascript.net/Eloquent_JavaScript.pdf" type="application/pdf" width="50%" height="400px"></object><br>
 
 		<!-- iframe could also load source form ouside,but you sould be aware of URL and server response. CHeck this http://stackoverflow.com/questions/27358966/how-to-set-x-frame-options-on-iframe -->
-		<iframe src="https://www.youtube.com/embed/kDyJN7qQETA" width="400px" height="400px"></iframe><br>
+		<iframe src="http://eloquentjavascript.net/Eloquent_JavaScript.pdf" width="400px" height="400px"></iframe><br>
+
+		<embed src="http://eloquentjavascript.net/Eloquent_JavaScript.pdf" width="400px" height="400px"></embed><br>
 
 		<a href="http://stackoverflow.com/questions/16660559/difference-between-iframe-embed-and-object-elements">What is different between iframe and Object!</a>
 		<header>
@@ -174,8 +177,17 @@
 			<canvas id="canvas" width="800" height="400">
 			</canvas><br>
 
-			<img src="./trysvg.svg"/ widh="400" height="400">
+			<!-- This cannot manipulate animation! http://stackoverflow.com/questions/32530415/changing-svg-color-on-hover-inside-span-called-as-another-style -->
+			<img src="./trysvg.svg" width="400" height="400"/>
 
+			<object id="E" type="image/svg+xml" data="./trysvg.svg" width="400" height="400">
+			</object>
+
+
+			<embed src="./trysvg.svg" width="400" height="400"/>
+			<!-- iframe Solution -->
+			<iframe src="./trysvg.svg" width="400" height="400"/>
+			<!-- You can use <object> also. Like mentioning above, <object> is more static and being deprecated. -->
 		</main>
 
 		<footer>
