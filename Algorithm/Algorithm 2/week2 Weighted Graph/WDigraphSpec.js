@@ -2,6 +2,8 @@ var expect = require('chai').expect;
 var DirectedEdge = require('./WDiGraph.js').DirectedEdge;
 var EdgeWeightedDigraph = require('./WDiGraph.js').EdgeWeightedDigraph;
 var DijkstraSP = require('./WDiGraph.js').DijkstraSP;
+var AcyclicSP = require('./WDiGraph.js').AcyclicSP;
+var BFSP = require('./WDiGraph.js').BFSP;
 
 describe("Weighted Undirected Graph", function () {
 	var edgeWeightDiGraph = new EdgeWeightedDigraph(8);
@@ -22,5 +24,11 @@ describe("Weighted Undirected Graph", function () {
 	edgeWeightDiGraph.addEdges(new DirectedEdge(7,5,6));
 	edgeWeightDiGraph.addEdges(new DirectedEdge(7,2,7));
 	var dijkstraSP = new DijkstraSP(edgeWeightDiGraph, 0);
+	var acyclicSP = new AcyclicSP(edgeWeightDiGraph, 0);
+	var bFSP = new BFSP(edgeWeightDiGraph, 0);
+
+	console.log(dijkstraSP.edgeTo);
+	console.log(bFSP.edgeTo);
 	console.log(dijkstraSP.distTo);
+	console.log(bFSP.distTo);
 })
