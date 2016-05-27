@@ -27,8 +27,6 @@ describe("Weighted Undirected Graph", function () {
 	var acyclicSP = new AcyclicSP(edgeWeightDiGraph, 0);
 	var bFSP = new BFSP(edgeWeightDiGraph, 0);
 
-	console.log(dijkstraSP.edgeTo);
-	console.log(bFSP.edgeTo);
-	console.log(dijkstraSP.distTo);
-	console.log(bFSP.distTo);
+	expect(dijkstraSP.edgeTo).is.eql(bFSP.edgeTo);
+	expect(acyclicSP.edgeTo).is.eql(bFSP.edgeTo);
 })
