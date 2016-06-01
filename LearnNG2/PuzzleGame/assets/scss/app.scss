@@ -1,0 +1,91 @@
+body {
+  padding: 32px;
+  margin: 32px;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+}
+
+h1{
+  text-align: center;
+}
+
+section{
+  width: 70%;
+  min-width: 920px;
+  border: 2px solid;
+  margin: 5px auto;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  padding: 10px 10px;
+}
+
+.choose-player{
+  overflow: auto;
+  padding: 10px;
+  .create-player{
+    float: left;
+    width: 200px;
+    h3{
+      margin: 5px;
+    }
+    label{
+      display: block;
+      text-align: center;
+    }
+    input, button{
+      width: 160px;
+      margin-left: 20px;
+      margin-bottom: 5px;
+    }
+  }
+  .player-list-board{
+    margin-left: 220px;
+    padding: 0 35px 0 35px;
+    h3{
+      display: block;
+      text-align: center;
+      margin: 5px;
+    }
+    .player-list{
+      padding-left: 20px;
+      .player-list-item{
+        display: inline-block;
+        width: 180px;
+        border: 2px solid blue;
+        border-radius: 5px;
+        margin:0px 10px 10px 0px;
+        .player-list-title{
+          background: blue;
+          color: white;
+          text-align: center;
+          margin:0px;
+        }
+        .player-list-content > p{
+          margin: 2px;
+        }
+        .player-list-content > div{
+          word-wrap:break-word;
+        }
+      }
+    }
+  }
+  .player-edit-area{
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    * {
+      margin-right: 5px;
+    }
+  }
+}
+
+.solved{
+  background-color: lightgreen;
+  border-color: #00AA00;
+}
+
+.unsolved{
+  background-color: lightpink;
+  border-color: darkred;
+}
