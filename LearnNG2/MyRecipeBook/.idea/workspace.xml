@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b2d3869-3892-4930-bfc2-fbb8f45fcb7a" name="Default" comment="" />
+    <list default="true" id="7b2d3869-3892-4930-bfc2-fbb8f45fcb7a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dev/app.component.ts" afterPath="$PROJECT_DIR$/dev/app.component.ts" />
+    </list>
     <ignored path="RecipeBook.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,7 +14,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -24,50 +26,34 @@
       <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dev/app.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="boot.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dev/boot.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+            <state relative-caret-position="230">
+              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
               <folding>
-                <element signature="e#47#107#0" expanded="true" />
+                <element signature="e#0#40#0" expanded="true" />
+                <marker date="1464963785000" expanded="true" signature="331:585" ph="..." />
+                <marker date="1464963785000" expanded="true" signature="349:567" ph="..." />
+                <marker date="1464963785000" expanded="true" signature="370:548" ph="..." />
+                <marker date="1464963785000" expanded="true" signature="612:671" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="shopping-list.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dev/shopping-list/shopping-list.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+            <state relative-caret-position="75">
+              <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recipe-detail.tpl.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/recipes/recipe-detail.tpl.html">
+      <file leaf-file-name="recipe.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dev/recipe-book/recipe.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="recipe-edit.tpl.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/recipes/recipe-edit.tpl.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+            <state relative-caret-position="90">
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -89,11 +75,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/dev/shared/ingrediant.ts" />
-        <option value="$PROJECT_DIR$/dev/shared/shopping-list.service.ts" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/dev/boot.ts" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/dev/shared/ingrediant.ts" />
+        <option value="$PROJECT_DIR$/dev/shared/shopping-list.service.ts" />
+        <option value="$PROJECT_DIR$/dev/shared/recipe.ts" />
+        <option value="$PROJECT_DIR$/dev/recipe-book/recipe.service.ts" />
+        <option value="$PROJECT_DIR$/dev/shopping-list/shopping-list.component.ts" />
+        <option value="$PROJECT_DIR$/dev/recipe-book/recipe.component.ts" />
         <option value="$PROJECT_DIR$/dev/app.component.ts" />
       </list>
     </option>
@@ -141,6 +131,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -173,10 +165,94 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyRecipeBook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyRecipeBook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shopping-list" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyRecipeBook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyRecipeBook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shared" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyRecipeBook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyRecipeBook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dev" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recipe-book" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyRecipeBook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyRecipeBook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scss" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyRecipeBook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyRecipeBook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -260,6 +336,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="7b2d3869-3892-4930-bfc2-fbb8f45fcb7a" name="Default" comment="" />
@@ -272,7 +351,8 @@
       <workItem from="1464870993758" duration="1789000" />
       <workItem from="1464874125057" duration="642000" />
       <workItem from="1464874806719" duration="157000" />
-      <workItem from="1464874967327" duration="703000" />
+      <workItem from="1464874967327" duration="3898000" />
+      <workItem from="1464963173699" duration="995000" />
     </task>
     <task id="LOCAL-00001" summary="update MyRecipeBook origin">
       <created>1464875833857</created>
@@ -285,21 +365,21 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4721000" />
+    <option name="totallyTimeSpent" value="8911000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="768" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32988167" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988167" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988167" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32988167" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840237" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -333,9 +413,37 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/dev/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+            <marker date="1464963785000" expanded="true" signature="331:585" ph="..." />
+            <marker date="1464963785000" expanded="true" signature="349:567" ph="..." />
+            <marker date="1464963785000" expanded="true" signature="370:548" ph="..." />
+            <marker date="1464963785000" expanded="true" signature="612:671" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/recipe-book/recipe.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+            <marker date="1464963785000" expanded="true" signature="331:585" ph="..." />
+            <marker date="1464963785000" expanded="true" signature="349:567" ph="..." />
+            <marker date="1464963785000" expanded="true" signature="370:548" ph="..." />
+            <marker date="1464963785000" expanded="true" signature="612:671" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -353,7 +461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -361,7 +468,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -369,7 +475,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -377,7 +482,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="24" column="20" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="20" />
-          <folding />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+            <marker date="1464963785000" expanded="true" signature="331:585" ph="..." />
+            <marker date="1464963785000" expanded="true" signature="349:567" ph="..." />
+            <marker date="1464963785000" expanded="true" signature="370:548" ph="..." />
+            <marker date="1464963785000" expanded="true" signature="612:671" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -385,7 +496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -393,7 +503,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -401,7 +510,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -409,7 +517,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="24" column="20" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="20" />
-          <folding />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+            <marker date="1464963785000" expanded="true" signature="331:585" ph="..." />
+            <marker date="1464963785000" expanded="true" signature="349:567" ph="..." />
+            <marker date="1464963785000" expanded="true" signature="370:548" ph="..." />
+            <marker date="1464963785000" expanded="true" signature="612:671" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -417,7 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -425,7 +538,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -435,7 +547,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+            <marker date="1464963785000" expanded="true" signature="331:585" ph="..." />
+            <marker date="1464963785000" expanded="true" signature="349:567" ph="..." />
+            <marker date="1464963785000" expanded="true" signature="370:548" ph="..." />
+            <marker date="1464963785000" expanded="true" signature="612:671" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -459,7 +577,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+            <marker date="1464963785000" expanded="true" signature="331:585" ph="..." />
+            <marker date="1464963785000" expanded="true" signature="349:567" ph="..." />
+            <marker date="1464963785000" expanded="true" signature="370:548" ph="..." />
+            <marker date="1464963785000" expanded="true" signature="612:671" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -484,21 +608,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev/shared/shopping-list.service.ts" />
-    <entry file="file://$PROJECT_DIR$/dev/shared/ingrediant.ts" />
-    <entry file="file://$PROJECT_DIR$/templates/recipes/recipe-edit.tpl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/recipes/recipe-detail.tpl.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -509,7 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dev/recipe-book/recipe.service.ts" />
     <entry file="file://$PROJECT_DIR$/dev/recipe-book/recipe-detail.component.ts" />
     <entry file="file://$PROJECT_DIR$/dev/recipe-book/recipes.component.ts" />
     <entry file="file://$PROJECT_DIR$/dev/boot.ts">
@@ -526,15 +638,81 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
           <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/shared/ingrediant.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/recipes/recipe-edit.tpl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/shared/recipe.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/shared/shopping-list.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/recipe-book/recipe.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scss/app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/recipe-book/recipe.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dev/shopping-list/shopping-list.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dev/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="230">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+            <marker date="1464963785000" expanded="true" signature="331:585" ph="..." />
+            <marker date="1464963785000" expanded="true" signature="349:567" ph="..." />
+            <marker date="1464963785000" expanded="true" signature="370:548" ph="..." />
+            <marker date="1464963785000" expanded="true" signature="612:671" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
