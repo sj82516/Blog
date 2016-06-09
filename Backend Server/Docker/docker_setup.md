@@ -134,16 +134,4 @@ My settings : auto install nodejs v5.x and run test.js as default command.
 Docker Machine / Swarm / Compose  
 當部署時，往往會需要部署到多台機器上，一台跑Nginx、幾台當AP Server還有DB Server，如果不幸還跑在不同平台上如 DigitalOcean、Amazon...，管理起來會十分的崩潰，所以Docker提供這三樣工具方便管理多台Server。  
 
-####Machine  
-同時管理多台Server，可以與Digital Ocean, Azure , Amazon等PaaS平台串接，快速啟動與管理docker  
- ![img](https://github.com/sj82516/Blog/blob/master/%E9%9B%9C%E8%A8%98/Docker/Setup-img/d6.jpg)  
-
-####Swarm  
-集群管理，自動分配containers到多個node上  
-![img](https://github.com/sj82516/Blog/blob/master/%E9%9B%9C%E8%A8%98/Docker/Setup-img/d7.jpg)  
-
-####Compose   
-在部署網站時，會需要部署DB、AP、Proxy等多個不同的container，透過docker-compose可以一次性部署並處理containers間的連結(link)    
-![img](https://github.com/sj82516/Blog/blob/master/%E9%9B%9C%E8%A8%98/Docker/Setup-img/d5.jpg)  
-
 
