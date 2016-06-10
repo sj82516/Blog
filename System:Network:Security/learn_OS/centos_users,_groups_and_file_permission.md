@@ -1,6 +1,6 @@
 ### CentOS Users, Groups and File Permission  
-[Source1]
-[Source2]
+[Source1](https://www.udemy.com/linux-administration/learn/v4/t/lecture/3206434)    
+[Source2](http://linux.vbird.org/linux_basic/0220filemanager.php)  
 
 #####Learn how to add users, groups and give diff file permission.    
 1. `$ useradd -c [Commit message] -m (create folder under /home/) -M(not create folder) -d [/work/dir] -s [/shell path] -g [default group] -G [groups] user_name`   
