@@ -2,7 +2,7 @@
 [資料來源一.Udemy Course0](https://www.udemy.com/linux-administration)  
 [資料來源二.鳥哥 第十九章](http://linux.vbird.org/linux_basic/0510osloader.php)  
 
-![img source from 鳥哥](./osloader-flow-initramfs.jpg)
+![img source from 鳥哥](https://github.com/sj82516/Blog/blob/master/System:Network:Security/learn_OS/img/osloader-flow-initramfs.jpg)
 
 ##### BIOS  
 1.OS independent   
