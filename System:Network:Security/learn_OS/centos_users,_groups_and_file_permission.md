@@ -28,7 +28,7 @@
 Because script is run by 'shell,python or other interpreter', it need to read file;   
 In the other hand, binary file or regualr instruction(ls,cd...) is directly load into kernel.](http://unix.stackexchange.com/questions/34202/can-a-script-be-executable-but-not-readable)  
 * Specail permission :
-	1. SUID : Set UID. ex:`$ ls -l /etc/passwd` => -rwsr-xr-x:  
+	1. SUID(only for File) : Set UID. ex:`$ ls -l /etc/passwd` => -rwsr-xr-x:  
 	root can directly modify /etc/passwd, normal user cannot. But normal user could use `$passwd` to change his own password!  
 	2. SGID : Set GID. If user create new file. The effective group under this dir would apply to new file.  
 	ex:userA and userB in the same group. To create a share forlder that userA and userB can cowork.    
@@ -45,5 +45,11 @@ In the other hand, binary file or regualr instruction(ls,cd...) is directly load
 	`$ su userA`  
 	`$ cd /test && touch hello.txt`   
 	`$ ls -l hello.txt` => userA:group -rw-rw-r--.  
+	3.Sticky Bits : only onwer can delete file/dir.  
+	normal usage : +1777  
+	4.Special case: if you set special permission wrong , it would be Capital Word.   
+	ex: --rwxrwSr-- : Because Set GID need group permission has 'x' permission, it make no sense.  
+	drwxr-xr-T, -rwS-r--r is all no make sense. 
+	
   
   
