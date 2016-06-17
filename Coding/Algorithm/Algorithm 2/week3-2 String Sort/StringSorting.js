@@ -98,8 +98,41 @@ var MSD = function(s){
 	this.sorted = s;
 }
 
+var Quick3String = function(s){
+	this.sorted = [];
+	len = s.length;
+
+	this.sort = function(lo,hi,index){
+		if(hi<=lo){
+			return;
+		}
+		let t = s[lo].length<=index?-1:s[lo].charCodeAt(index);
+		let lt=lo,gt=hi;
+		for(let i=lo+1; i<=gt;){
+			let v = s[i].length<=index?-1:s[i].charCodeAt(index);
+			if(t>v){
+				exch(s,lt++,i++);
+			}else if(t<v){
+				exch(s,gt--,i);
+			}else{
+				i++;
+			}
+		}
+		this.sort(lo,lt-1,index);
+		if(t>0) this.sort(lt,gt, index++);
+		this.sort(gt+1,hi, index);
+	}
+	function exch(s, a, b){
+		let temp = s[a];
+		s[a] = s[b];
+		s[b] = temp;
+	}
+	this.sorted = s;
+}
+
 module.exports = {
 	KeyIndexCounting : KeyIndexCounting,
 	LSD : LSD,
-	MSD : MSD
+	MSD : MSD,
+	Quick3String : Quick3String
 }
