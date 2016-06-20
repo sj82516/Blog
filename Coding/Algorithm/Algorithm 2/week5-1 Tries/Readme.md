@@ -10,5 +10,8 @@ Insert時則逐一在R[i]創建新節點，在string最末位輸入value表示st
 浪費的記憶體    
 ![示意圖二](./img/tst2.jpg)   
 2.TST(Tenary Search Tries):  
-為了節省記憶體，TST採用類似BST結構，每個節點改存三個子節點(大於、等於、小於)，透過比對字元方式，逐一遞迴插入或搜尋，其running time與R-Way Tries相似，但是記憶體節省很多。  
+為了節省記憶體，TST採用類似BST結構，每個節點改存三個子節點(大於、等於、小於)，middle node表示為子字元，詳見示意圖    
+透過比對字元方式，逐一遞迴插入或搜尋，其running time與R-Way Tries相似，但是記憶體節省很多。  
+keys:[are,by,sea,sells,shells,surely,the]  
 ![示意圖三](./img/tst3.jpg)    
+*示意圖皆為課堂講義截圖  
