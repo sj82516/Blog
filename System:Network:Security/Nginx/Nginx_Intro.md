@@ -1,4 +1,4 @@
-### Nginx
+### Nginx Basic
 It's so widely used in proxy server and cache server.  
 It's time to learn it clearly.  
 Reference : [Nginx official Doc](https://nginx.org/en/docs/beginners_guide.html)
@@ -94,5 +94,33 @@ $ vi /etc/sysctl.conf
 >> net.core.somaxconn = 4096 ```  
 
 4. much more about tcp  
-when to use tcp_nodelay and tcp_nopush is really interesting.  
-see more [here](http://stackoverflow.com/questions/3761276/when-should-i-use-tcp-nodelay-and-when-tcp-cork)  
+TCP is a huge and complicated protocol and live in everywhere.  
+There are two algorithm about increasing performance by reduce header overhead:  
+1. Nagle:  
+[Wiki](https://en.wikipedia.org/wiki/Nagle%27s_algorithm) explain it very clearly. In short, Nagle would bundle the pks until more than MSS(maximum segment size), or it would wait for ACK to send out pks.
+2. delayed ACK:  
+Delay reply ACK and bundle several pks. This is suitable for telnet because every time sending a byte(keyboard input) over network is too trivial.
+see more [here](http://stackoverflow.com/questions/3761276/when-should-i-use-tcp-nodelay-and-when-tcp-cork) && [video](https://www.youtube.com/watch?v=LFdRFWGG5Dw)  
+
+##### Compress  
+Reduce transmitted data but increase process overhead.  
+1. Turn on gzip  
+```
+server {
+    gzip on;
+    gzip_types      text/plain application/xml; -> default, gzip would only compress html, you have to add other MIME type to compress them.
+    gzip_proxied    no-cache no-store private expired auth; -> normally , nginx would not compress the request from proxy server. But it make sense to compress those request that wouldn't be cached.
+    gzip_min_length 1000; -> limitation to compress.
+    ...
+}```
+2. un gzip, some client might not support decompression ability. Turn gunzip would auto decompress for this kind of clients.  
+declare in the some section.  
+```server {    
+    gzip on;  
+    gzip_min_length 1000;  
+    gunzip on;  
+}```
+3. Sending compressed file.This would auto find .gz file under the folder.
+```location / {  
+    gzip_static on;  
+}```
