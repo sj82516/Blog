@@ -47,3 +47,5 @@ location ~* ^/static/images/$ {
 
 Of course, the real situation is much more complicated.  
 You can check out [Chinese2](https://blog.toright.com/posts/3414/%E5%88%9D%E6%8E%A2-http-1-1-cache-%E6%A9%9F%E5%88%B6.html).    
+
+##### 2. Proxy / Load balance and Cache.  
