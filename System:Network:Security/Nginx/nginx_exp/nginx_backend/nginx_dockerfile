@@ -1,0 +1,11 @@
+FROM ubuntu:14.04
+RUN apt-get update \
+  && apt-get install -y nginx curl \
+  && rm -v /etc/nginx/nginx.conf \
+  && curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash - \
+  && apt-get install -y nodejs
+ADD nginx.conf /etc/nginx/
+EXPOSE 80 3000
+COPY nodejs /var/www/nodejs
+WORKDIR /var/www/nodejs/
+CMD sh start.sh

@@ -9,6 +9,7 @@ How server and client interact with each other?
 They both depend on HTTP Header !  
 Here are several good articles [English](https://www.theodo.fr/blog/2016/06/improve-the-performance-of-your-webapp-configure-nginx-to-cache/), [Chinese 1](https://blog.othree.net/log/2012/12/22/cache-control-and-etag/)  [Chinese2](https://blog.toright.com/posts/3414/%E5%88%9D%E6%8E%A2-http-1-1-cache-%E6%A9%9F%E5%88%B6.html)  
 Briefly speaking,   
+The main purpose of cache is "reduce request" and "reduce response".  
 1. at first browser would send request to server. This time browser has no cache yet.  
 2. Then server would return requested files. Corresponding to header
 3. browser will cache the files in different way.  
@@ -49,3 +50,13 @@ Of course, the real situation is much more complicated.
 You can check out [Chinese2](https://blog.toright.com/posts/3414/%E5%88%9D%E6%8E%A2-http-1-1-cache-%E6%A9%9F%E5%88%B6.html).    
 
 ##### 2. Proxy / Load balance and Cache.  
+The code is inside nginx_exp folder.  
+```
+-nginx_exp
+  |
+  |-nginx_backend : nginx- serve static file and set Cache / nodejs- backend server
+  |
+  |-nginx_proxy : proxy / load balance and proxy cache  
+  |
+  |-nodejs : serve static file and backend server  
+  ```
