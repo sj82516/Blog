@@ -18,7 +18,9 @@
 1.github_oauth_url中不需夾帶redirect_url! 在Github OAuth頁面設定好即可，我原先有夾帶但是試了幾次都會出錯，拿到就perfect!  
 2.拿access_token換使用者資料步驟header要夾帶User-Agent，我在這一步卡了有點久OTZ 感覺官方文件可以補充的更詳盡些(明明就是自己眼殘lol)  
 3.Authorization callback URL一定要填寫正確，ex.http://localhost:3000/github/callback  
+
 ##### Server-Side
+
 ```Javascript
 //存在環境變數或是外部文件中比較安全
 var github_client_id=;
@@ -71,8 +73,10 @@ router.get('/github/callback', function(req, res){
       });
   });
 });```
+
 ##### Browser-Side  
 基本上就是發出xhr，Server回傳redirect_url，瀏覽器跳轉頁面
+
 ```Javascript
 var githibOath = document.getElementById("github-oauth");
   githibOath.addEventListener("click", function(){
