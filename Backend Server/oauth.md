@@ -13,7 +13,7 @@
 
 ##### 1.Github  
 [參考官方文件](https://developer.github.com/v3/oauth/#scopes)  
-![申請頁面]()  
+![申請頁面](https://github.com/sj82516/Blog/blob/master/Backend%20Server/oauth_imgs/github.png)  
 其中有雷是   
 1.github_oauth_url中不需夾帶redirect_url! 在Github OAuth頁面設定好即可，我原先有夾帶但是試了幾次都會出錯，拿到就perfect!  
 2.拿access_token換使用者資料步驟header要夾帶User-Agent，我在這一步卡了有點久OTZ 感覺官方文件可以補充的更詳盡些(明明就是自己眼殘lol)  
@@ -72,7 +72,9 @@ router.get('/github/callback', function(req, res){
          res.send(body);
       });
   });
-});```
+});
+```           
+
 
 ##### Browser-Side  
 基本上就是發出xhr，Server回傳redirect_url，瀏覽器跳轉頁面
@@ -89,24 +91,28 @@ var githibOath = document.getElementById("github-oauth");
               window.location.href = JSON.parse(xhttp.responseText).redirect_url;
           }
       };
-});```
+});
+```   
 
 #### 2. Google
 [參考官方文件-Server Side實作流程](https://developers.google.com/identity/protocols/OAuth2WebServer)  
 [官方文件-申請Google憑證](https://developers.google.com/identity/sign-in/web/devconsole-project)  
-[官方文件-scope們](https://developers.google.com/identity/protocols/googlescopes)      
+[官方文件-scope們](https://developers.google.com/identity/protocols/googlescopes)   
+附註:點進scope網頁中，可以看到一連串的scope定義，如果你把scope url(ex.https://www.googleapis.com/auth/adexchange.buyer)貼近
+瀏覽器中，你會發現頁面只顯示個別命名字(ex. adexchange.buyer)，這個部分是用於下方的scope定義中  
 本質上與Gihub申請流程差不多，只是參數多了點，scope可選擇範圍多了很多的多lol   
 至於Google Console中的設定參考下圖  
 ![流程一](https://github.com/sj82516/Blog/blob/master/Backend%20Server/oauth_imgs/google1.jpg)  
+選擇OAuth  
 ![流程二](https://github.com/sj82516/Blog/blob/master/Backend%20Server/oauth_imgs/google2.jpg)  
 ![流程三](https://github.com/sj82516/Blog/blob/master/Backend%20Server/oauth_imgs/google3.jpg)  
 ![流程四](https://github.com/sj82516/Blog/blob/master/Backend%20Server/oauth_imgs/google4.png)  
 ##### Server-Side
-```Javascript
+```Javascript   
 // for google oauth
 router.get("/google", function(req, res, next){
     var google_oauth_url = "https://accounts.google.com/o/oauth2/v2/auth?" +  
-    //Scope可以參考文件裡各式各樣的scope
+    //Scope可以參考文件裡各式各樣的scope，可以貼scope url或是個別命名
     "scope=email%20profile&"+
     "redirect_uri=http://localhost:3000/google/callback&"+
     "response_type=code&"+
@@ -143,4 +149,5 @@ router.get("/google/callback", function(req, res) {
             res.send(body);
         });
     })
-});```
+});
+```   
