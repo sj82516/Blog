@@ -93,10 +93,10 @@ var githibOath = document.getElementById("github-oauth");
 [官方文件-scope們](https://developers.google.com/identity/protocols/googlescopes)      
 本質上與Gihub申請流程差不多，只是參數多了點，scope可選擇範圍多了很多的多lol   
 至於Google Console中的設定參考下圖  
-![流程一]()  
-![流程二]()  
-![流程三]()  
-![流程四]()  
+![流程一](https://github.com/sj82516/Blog/blob/master/Backend%20Server/oauth_imgs/google1.jpg)  
+![流程二](https://github.com/sj82516/Blog/blob/master/Backend%20Server/oauth_imgs/google2.jpg)  
+![流程三](https://github.com/sj82516/Blog/blob/master/Backend%20Server/oauth_imgs/google3.jpg)  
+![流程四](https://github.com/sj82516/Blog/blob/master/Backend%20Server/oauth_imgs/google4.png)  
 ##### Server-Side
 ```Javascript
 // for google oauth
