@@ -1,0 +1,6 @@
+{
+  "friends":[
+    {"username":"friendA"},
+    {"username":"friendB"}
+  ]
+}

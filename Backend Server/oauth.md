@@ -13,7 +13,12 @@ Oauth透過授權流程，讓我們只要在主要的網站設定帳號密碼(�
 客戶端-------夾帶code------->授權伺服器  
 授權伺服器----回傳access_token--->客戶端  
 客戶端-------拿access_token----->資源擁有伺服器  
-資源伺服器回傳相對應資料  
+資源伺服器回傳相對應資料    
+
+3.附註   
+Facebook和Google都有提供implicit login，可以直接在瀏覽器用JS發出請求  
+Facebook還有直接提供Javascript SDK  
+但是官網也提到 在瀏覽器端直接請求授權風險很大，所以我實做都是在Server-Side
 
 #### 實作
 * 使用 NodeJS v5.x / Express v4.x / Request v2.x
@@ -243,5 +248,9 @@ GET /oauth/access_token
 我是用POSTMAN發出，最後將此token記錄下來當常數，因為官網沒有寫expire時間，估計就是永久有效吧(不確定lol)  
 
 #### 總結  
-1.POSTMAN是Debug好物，用來發request十分方便  
-2.目前的流程過於簡陋，例如說登入整個頁面都會跑掉，如果搭配SPA就不方便了，下一步來改成Popup window處理。  
+1.POSTMAN是Debug好物，用來發request十分方便   
+2.目前的流程過於簡陋，例如說登入整個頁面都會跑掉，如果搭配SPA就不方便了，下一步來改成Popup window處理。   
+3.參考 https://github.com/sj82516/Bookstore/releases version0.0.1，抓下來 npm install && npm start，
+記得改routing path與各個頁面的callback URL。
+4.另外，我在檔案中 github和google都是用localhost，而facebook則是用local.example.com，後者是我自己加上去的alias name  
+同樣也是指到localhost，至於為什麼這麼做.... 一開始我以為facebook不支援localhost，所以才搞出來的烏龍，實際上用localhost即可
