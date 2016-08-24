@@ -1,4 +1,5 @@
 # Blog-記錄替代役人生  
+** 內容更新至[Logdown部落格](http://sj82516-blog.logdown.com/)中 **
 替代役下單位後，發現空閒時間蠻多的，怕自己荒廢學業，所以用Github記錄每天的學習進度，藉此監督自我，希望一年後成為優秀的Javascript工程師。  
 以下是對於自我求職前的技能準備：  
 一.程式基本能力：演算法與資料結構  
@@ -14,7 +15,7 @@
 6. 資料視覺化(D3.js)與遊戲開發(PhaserJS)    
 
 三.系統層面學習  
-1.Linux與網路相關(Nginx)  
+1.Linux與網路相關  
 2.Docker快速部署  
 3.DB相關(MongoDB/Redis/MySQL)  
 4.架站相關知識補充  
@@ -26,4 +27,4 @@
 4.壓測學習(AB)  
 
 五.其他  
-1.學習其他語言(Java / Python / Ruby)  
+1.學習其他語言(Scala / Haskell / Golang)
