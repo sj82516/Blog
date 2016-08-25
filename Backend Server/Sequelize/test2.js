@@ -1,8 +1,6 @@
 const Sequelize = require("sequelize");
 const Moment = require("moment");
 
-let hash_key = "this_is_test";
-
 let sequelize = new Sequelize('test', 'root', 'test1', {
     host: '192.168.99.100',
     dialect: 'mysql',
@@ -46,8 +44,7 @@ let Item = sequelize.define('items', {
     collate: 'utf8_unicode_ci',
     scopes:{
         outdate:{
-            //bug!
-            where:sequelize.where(sequelize.fn('date_format', sequelize.col('onShelfDate'), '%Y'),{$lt:'2016'})
+            where:sequelize.where(sequelize.fn('date_format', sequelize.col('onShelfDate'), '%Y'),{$lt:'2015'})
         },
         delete:{
             where:{
@@ -117,8 +114,8 @@ Item.sync({force:true}).then(()=>{
     )
 }).then(()=>{
     console.log('destroy finished');
-
     //使用scope更新過期商品
+    //return Item.scope('outdate').update({name:'out!'},{where:{}});
 }).then((affectedAccount)=>{
     console.log(affectedAccount);
 
@@ -128,7 +125,7 @@ Item.sync({force:true}).then(()=>{
     console.log(items);
 
     //使用scope刪除status為false的商品
-    return Item.scope('delete').destroy({where:{name:'卡比獸'}});
+    return Item.scope('delete').destroy({where:{}});
 }).then(()=>{
     console.log('finished');
 }).catch((err)=>{
