@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "target": "es6",
+        "outDir": "./lib",
+        "pretty": true,
+        "experimentalDecorators": true
+    },
+    "include":[
+        "./*.ts"
+    ],
+    "exclude":[
+        "typings"
+    ]
+}
